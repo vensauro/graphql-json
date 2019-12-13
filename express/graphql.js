@@ -13,6 +13,7 @@ router.use('/', async (req, res, next) => {
   let data = {};
 
   console.log("url", req.url)
+  console.log("req", req)
   const body = await got(url).json();
   
   data = body.result
