@@ -12,7 +12,9 @@ router.use('/', async (req, res, next) => {
   const url = process.env.URL
   let data = {};
 
+  console.log("url", req.url)
   const body = await got(url).json();
+  
   data = body.result
   jsonGraphqlExpress.default(data)(req, res, next)
 
@@ -21,7 +23,6 @@ router.use('/', async (req, res, next) => {
       json: data
     }).json();
 
-    console.log(body);
   }, 2000);
 });
 
