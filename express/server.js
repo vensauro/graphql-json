@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 
-app.use('/graphql', async (req, res, next) => {
+router.use('/graphql', async (req, res, next) => {
   const url = "https://www.jsonstore.io/0e80d3317ae8f2ecc87eb87e785b033cb335ad7ecfd23dab6456c44f5494e446"
   let data = {};
 
